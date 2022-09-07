@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header-container">
+            <h1>Assignment 4</h1>
+        </div>
+        <div class="settings-container">
+            <div class="modes-container">
+                <h3>Camera Mode</h3>
+                <div class="modes">
+                    <div id="fpsCamMode" class="indicator inactive">FPS</div>
+                    <div id="statCamMode" class="indicator inactive">Stationary</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Projection Mode</h3>
+                <div class="modes">
+                    <div id="perspProjMode" class="indicator inactive">[P]erspective</div>
+                    <div id="orthoProjMode" class="indicator inactive">[O]rthographic</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <!-- do ids stack? -->
+                <h3>Selection</h3>
+                <div class="modes">
+                    <div id="selectionRaycasting" class="indicator inactive">[R]aycast</div>
+                    <div id="selectionTarget" class="indicator inactive">No Target Selected</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Shading</h3>
+                <div class="modes">
+                    <div id="phong" class="indicator inactive">[1] Phong</div>
+                    <div id="gourad" class="indicator inactive">[2] Gourad</div>
+                    <div id="flat" class="indicator inactive">[3] Flat</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="sliders">
+            <h4 id="matName">No Object Chosen</h4>
+            <div class="colorPick">
+                <p>ka</p>
+                <input type="color" id="ka" class="color" value="#ffffff">
+            </div>
+
+            <div class="colorPick">
+                <p>kd</p>
+                <input type="color" id="kd" class="color" value="#ffffff">
+            </div>
+
+            <div class="colorPick">
+                <p>ks</p>
+                <input type="color" id="ks" class="color" value="#ffffff">
+            </div>
+
+            <div class="sliderInfo">
+                <p>shiny</p>
+                <p id="ssVal">32.0</p>
+            </div>
+            <input type="range" min="0" max="256" value="32" id="ss">
+        </div>
+
+        <div id="slidersLight">
+            <div>
+                <h4>Ambient Color</h4>
+                <input type="color" id="color" name="color" value="#ffffff">
+            </div>
+            <h4 id="lightName">No Light Chosen</h4>
+            <div class="colorPick">
+                <p>id</p>
+                <input type="color" id="id" class="color" value="#ffffff">
+            </div>
+
+            <div class="colorPick">
+                <p>is</p>
+                <input type="color" id="is" class="color" value="#ffffff">
+            </div>
+
+            <div id="sliderK">
+                <div class="sliderInfo">
+                    <p>k</p>
+                    <p id="kVal">0.01</p>
+                </div>
+                <input type="range" min="1" max="100" value="1" id="k">
+            </div>
+        </div>
+
+        <div id="webgl-container">
+            <canvas id="canvas"></canvas>
+        </div>
+
+    </div>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript">
+        const {
+            mat2,
+            mat3,
+            mat4,
+            vec2,
+            vec3,
+            vec4,
+            quat
+        } = glMatrix;
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

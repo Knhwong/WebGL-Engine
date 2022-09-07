@@ -1,0 +1,109 @@
+* {
+    font-family: monospace;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background-color: yellow;
+}
+
+#header-container {
+    margin: 2vh;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffecc2;
+}
+
+#webgl-container {
+    height: 100%;
+    width: 100%;
+}
+
+#canvas {
+    width: 100vw;
+    height: calc(100*0.56vw);
+    margin: auto auto;
+    background-color: white;
+    position: relative;
+}
+
+.settings-container {
+    margin: 0;
+    background-color: #fff8e9;
+    display: flex;
+    flex-direction: row;
+}
+
+.modes-container {
+    flex-direction: column;
+    margin: 1em;
+    align-content: center;
+}
+
+h3 {
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+
+.modes {
+    display: flex;
+    flex-direction: row;
+}
+
+.indicator {
+    margin: 1em;
+    color: lightgray;
+}
+
+.indicator.active {
+    color: blue;
+}
+
+#sliders {
+    position: absolute;
+    top: 230px;
+    left: 25px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+#slidersLight {
+    position: absolute;
+    top: 230px;
+    right: 25px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.sliderInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.colorPick {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.color {
+    margin-left: 20px;
+}
+
+#sliderK {
+    display: none;
+}

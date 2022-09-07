@@ -1,0 +1,80 @@
+{
+    "ambient": [0.1, 0.1, 0.1],
+    "camera": {
+        "type": "perspective",
+        "position": [3, 2, -10],
+        "lookat": [0, 0, 0],
+        "up": [0, 1, 0],
+        "fov": 60
+    },
+    "root": {
+        "name": "node0",
+        "type": "node",
+        "translation": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "children": [{
+                "name": "light1",
+                "type": "light",
+                "id": [1, 1, 1],
+                "is": [1, 1, 1],
+                "k": 0.01,
+                "position": [0, 2, 5],
+                "light_type": "point",
+                "children": []
+            },
+            {
+                "name": "Cylinder",
+                "type": "object",
+                "obj": "../objects/Cylinder.obj",
+                "color": "#05e1fa",
+                "translation": [-5, -1, 0],
+                "rotation": [0, 0, 0],
+                "scale": [1, 1, 1],
+                "children": []
+            },
+
+            {
+                "name": "Cube",
+                "type": "object",
+                "obj": "../objects/UCDavis.obj",
+                "color": "#05e1fa",
+                "translation": [5, 0, 0],
+                "rotation": [0, 0, 0],
+                "scale": [1, 1, 1],
+                "children": []
+            },
+            {
+                "name": "Ball",
+                "type": "object",
+                "obj": "../objects/Sandball.obj",
+                "color": "#05e1fa",
+                "translation": [0, 4, 0],
+                "rotation": [0, 0, 0],
+                "scale": [1, 1, 1],
+                "children": []
+            },
+            {
+                "name": "Weird",
+                "type": "object",
+                "obj": "../objects/Weird.obj",
+                "color": "#05e1fa",
+                "translation": [0, 0, 0],
+                "rotation": [0, 0, 0],
+                "scale": [1, 1, 1],
+                "children": []
+            },
+            {
+                "name": "Plane",
+                "type": "object",
+                "obj": "../objects/plane.obj",
+                "color": "#05e1fa",
+                "translation": [0, -2, 0],
+                "rotation": [0, 0, 0],
+                "scale": [10, 1, 10],
+                "children": []
+            }
+
+        ]
+    }
+}
